@@ -1,0 +1,221 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chart Styles */
+.chart-section {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 0 0 25px 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Custom Donut Chart Styles */
+.donut-chart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.donut-chart-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut-chart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  flex-shrink: 0;
+  border: 3px solid white;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+}
+
+.donut-total {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.donut-label {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 8px;
+  min-width: 180px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.legend-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.legend-name {
+  font-weight: 600;
+  color: #334155;
+  flex: 1;
+  font-size: 13px;
+}
+
+.legend-value {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 14px;
+  min-width: 25px;
+  text-align: center;
+}
+
+.legend-percent {
+  font-size: 12px;
+  color: #667eea;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Header Stats Percentage Styling */
+.stat-percentage {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .donut-chart-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .donut-chart {
+    width: 140px;
+    height: 140px;
+  }
+
+  .donut-center {
+    width: 60px;
+    height: 60px;
+  }
+
+  .donut-total {
+    font-size: 20px;
+  }
+
+  .donut-label {
+    font-size: 7px;
+  }
+
+  .legend-item {
+    min-width: auto;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .stat-percentage {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+    font-size: 11px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chart-container {
+    width: 100%;
+  }
+}
