@@ -1,0 +1,12 @@
+# Django and Core Dependencies
+Django>=4.0,<6.0
+
+# REST Framework and JWT Authentication
+djangorestframework>=3.13.0
+djangorestframework-simplejwt>=5.2.0
+
+# CORS Headers
+django-cors-headers>=4.0.0
+
+# Image Processing
+Pillow>=9.0.0
