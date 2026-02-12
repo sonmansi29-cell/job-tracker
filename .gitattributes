@@ -1,2 +1,7 @@
-frontend/* linguist-language=JavaScript
+# Language detection for GitHub
+*.py linguist-language=Python
+frontend/*.js linguist-language=JavaScript
+frontend/src/**/*.js linguist-language=JavaScript
+frontend/src/**/*.jsx linguist-language=JavaScript
+frontend/src/**/*.css linguist-language=CSS
 
