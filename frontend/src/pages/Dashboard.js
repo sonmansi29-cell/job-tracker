@@ -5,7 +5,7 @@ import AddJob from "./AddJob";
 import EditJob from "./EditJob";
 import StatusDonut from "../components/StatusDonut";
 import NotesPanel from "../components/NotesPanel";
-import { FiEdit3, FiTrash2, FiSettings } from "react-icons/fi";
+import { FiTrash2, FiSettings } from "react-icons/fi";
 
 function Dashboard() {
   const [jobs, setJobs] = useState([]);
@@ -14,7 +14,6 @@ function Dashboard() {
   const [editingJob, setEditingJob] = useState(null);
   const [notesOpen, setNotesOpen] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   // D-Day State
@@ -32,13 +31,6 @@ function Dashboard() {
         console.error("Failed to parse D-Days:", e);
       }
     }
-  }, []);
-
-  // Fetch user profile
-  useEffect(() => {
-    API.get("profile/")
-      .then((res) => setUser(res.data))
-      .catch((err) => console.error("Failed to fetch profile:", err));
   }, []);
 
   // Calculate days remaining from today
